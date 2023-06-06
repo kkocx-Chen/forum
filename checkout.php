@@ -1,6 +1,6 @@
 <?php
 // 建立與資料庫的連線
-$servername = "forum.kkocx.com"; // 資料庫伺服器名稱
+$servername = "terminal.kkocx.com"; // 資料庫伺服器名稱
 $username = "User01"; // 使用者名稱
 $password = "Test01"; // 使用者密碼
 $dbname = "user01"; // 資料庫名稱
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // 從資料庫中取得資料
-$sql = "SELECT * FROM your_table"; // 資料表名稱
+$sql = "SELECT * FROM Win11"; // 資料表名稱
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
