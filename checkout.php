@@ -17,10 +17,16 @@ $sql = "SELECT * FROM Win11"; // 資料表名稱
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+    // 建立一個 HTML 表格來顯示資料
+    echo "<table>";
+    echo "<tr><th>序號</th></tr>";
+
     // 迭代輸出每一筆資料
     while ($row = $result->fetch_assoc()) {
-        echo "序號：" . $row["serial_number"] . "<br>";
+        echo "<tr><td>" . $row["serial_number"] . "</td></tr>";
     }
+
+    echo "</table>";
 } else {
     echo "沒有資料";
 }
