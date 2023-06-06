@@ -24,7 +24,8 @@
 
         .custom-card {
             position: relative;
-            width: 400px; /* 自定义卡片宽度 */
+            width: 500px; /* 自定义卡片宽度 */
+            
         }
 
         .custom-card .card-btn {
