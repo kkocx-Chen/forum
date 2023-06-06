@@ -11,55 +11,58 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: -100px; /* 负值调整上边距 */
         }
 
         .card-columns {
             margin: 0 auto;
         }
+
+        .align-self-center {
+            align-self: center;
+            margin-top: -100px; /* 自定义上边距 */
+        }
     </style>
 </head>
 <body>
+    <?php
+    // 建立与数据库的连接
+    $servername = "terminal.kkocx.com"; // 数据库服务器名称
+    $username = "User01"; // 用户名
+    $password = "Test01"; // 密码
+    $dbname = "user01"; // 数据库名称
 
-<?php
-// 建立與資料庫的連線
-$servername = "terminal.kkocx.com"; // 資料庫伺服器名稱
-$username = "User01"; // 使用者名稱
-$password = "Test01"; // 使用者密碼
-$dbname = "user01"; // 資料庫名稱
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// 檢查連線是否成功
-if ($conn->connect_error) {
-    die("連線失敗：" . $conn->connect_error);
-}
-
-$sql = "SELECT * FROM Win11"; // 資料表名稱
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    echo '<div class="container mt-4">';
-    echo '<div class="card-columns">';
-
-    // 迭代输出每一笔数据
-    while ($row = $result->fetch_assoc()) {
-        echo '<div class="card mb-3 text-center">';
-        echo '<div class="card-body">';
-        echo '<h5 class="card-title">序號</h5>';
-        echo '<p class="card-text">' . $row["serial_number"] . '</p>';
-        echo '</div>';
-        echo '</div>';
+    // 检查连接是否成功
+    if ($conn->connect_error) {
+        die("连接失败：" . $conn->connect_error);
     }
 
-    echo '</div>';
-    echo '</div>';
-} else {
-    echo '沒有資料';
-}
+    $sql = "SELECT * FROM Win11"; // 数据表名称
+    $result = $conn->query($sql);
 
-// 關閉資料庫連線
-$conn->close();
-?>
+    if ($result->num_rows > 0) {
+        echo '<div class="container mt-4">';
+        echo '<div class="card-columns align-self-center">';
+
+        // 迭代输出每一笔数据
+        while ($row = $result->fetch_assoc()) {
+            echo '<div class="card mb-3 text-center">';
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title">序号</h5>';
+            echo '<p class="card-text">' . $row["serial_number"] . '</p>';
+            echo '</div>';
+            echo '</div>';
+        }
+
+        echo '</div>';
+        echo '</div>';
+    } else {
+        echo '没有数据';
+    }
+
+    // 关闭数据库连接
+    $conn->close();
+    ?>
 </body>
 </html>
