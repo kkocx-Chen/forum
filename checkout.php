@@ -46,9 +46,6 @@ if ($result->num_rows > 0) {
 } else {
     echo '沒有資料';
 }
-ㄋ
-
-
 
 
 // 關閉資料庫連線
