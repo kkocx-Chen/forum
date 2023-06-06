@@ -21,6 +21,16 @@
             align-self: center;
             margin-top: -200px; /* 自定义上边距 */
         }
+
+        .card {
+            position: relative;
+        }
+
+        .card .card-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -49,8 +59,9 @@
         while ($row = $result->fetch_assoc()) {
             echo '<div class="card mb-3 text-center">';
             echo '<div class="card-body">';
-            echo '<h5 class="card-title">序号</h5>';
+            echo '<h5 class="card-title">這是您的序號</h5>';
             echo '<p class="card-text">' . $row["serial_number"] . '</p>';
+            echo '<a href="#" class="btn btn-primary card-btn">按鈕</a>';
             echo '</div>';
             echo '</div>';
         }
