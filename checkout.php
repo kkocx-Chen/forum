@@ -63,7 +63,7 @@
             echo '<div class="card-body">';
             echo '<h5 class="card-title">這是您的序號</h5>';
             echo '<p class="card-text">' . $row["serial_number"] . '</p>';
-            echo '<a href="#" class="btn btn-primary card-btn">按鈕</a>';
+            echo '<a href="index.html" class="btn btn-primary card-btn">複製</a>';
             echo '</div>';
             echo '</div>';
         }
