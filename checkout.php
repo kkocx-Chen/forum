@@ -22,11 +22,12 @@
             margin-top: -200px; /* 自定义上边距 */
         }
 
-        .card {
+        .custom-card {
             position: relative;
+            width: 400px; /* 自定义卡片宽度 */
         }
 
-        .card .card-btn {
+        .custom-card .card-btn {
             position: absolute;
             bottom: 10px;
             right: 10px;
@@ -57,7 +58,7 @@
 
         // 迭代输出每一笔数据
         while ($row = $result->fetch_assoc()) {
-            echo '<div class="card mb-3 text-center">';
+            echo '<div class="card mb-3 text-center custom-card">';
             echo '<div class="card-body">';
             echo '<h5 class="card-title">這是您的序號</h5>';
             echo '<p class="card-text">' . $row["serial_number"] . '</p>';
