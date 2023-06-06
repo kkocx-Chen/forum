@@ -1,6 +1,6 @@
 <?php
 // 建立與資料庫的連線
-$servername = "localhost"; // 資料庫伺服器名稱
+$servername = "forum.kkocx.com"; // 資料庫伺服器名稱
 $username = "your_username"; // 使用者名稱
 $password = "your_password"; // 使用者密碼
 $dbname = "your_database"; // 資料庫名稱
