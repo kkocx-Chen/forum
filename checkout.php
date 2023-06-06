@@ -22,12 +22,11 @@ if ($conn->connect_error) {
     die("連線失敗：" . $conn->connect_error);
 }
 
-// 從資料庫中取得資料
 $sql = "SELECT * FROM Win11"; // 資料表名稱
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo '<div class="container">';
+    echo '<div class="container mt-4">'; // 加入 mt-4 類別調整上邊距
     echo '<div class="row justify-content-center">'; // 使用 justify-content-center 將卡片容器置中
 
     // 迭代輸出每一筆資料
@@ -47,6 +46,7 @@ if ($result->num_rows > 0) {
 } else {
     echo '沒有資料';
 }
+ㄋ
 
 
 
