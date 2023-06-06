@@ -1,9 +1,9 @@
 <?php
 // 建立與資料庫的連線
 $servername = "forum.kkocx.com"; // 資料庫伺服器名稱
-$username = "your_username"; // 使用者名稱
-$password = "your_password"; // 使用者密碼
-$dbname = "your_database"; // 資料庫名稱
+$username = "User01"; // 使用者名稱
+$password = "Test01"; // 使用者密碼
+$dbname = "user01"; // 資料庫名稱
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
