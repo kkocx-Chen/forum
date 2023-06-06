@@ -18,18 +18,20 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // 建立一個 HTML 表格來顯示資料
-    echo "<table>";
-    echo "<tr><th>序號</th></tr>";
+    echo '<table class="table table-striped">';
+    echo '<thead><tr><th>序號</th></tr></thead>';
+    echo '<tbody>';
 
     // 迭代輸出每一筆資料
     while ($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["serial_number"] . "</td></tr>";
+        echo '<tr><td>' . $row["serial_number"] . '</td></tr>';
     }
 
-    echo "</table>";
+    echo '</tbody></table>';
 } else {
-    echo "沒有資料";
+    echo '沒有資料';
 }
+
 
 // 關閉資料庫連線
 $conn->close();
