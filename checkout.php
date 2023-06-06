@@ -19,7 +19,7 @@
 
         .align-self-center {
             align-self: center;
-            margin-top: -100px; /* 自定义上边距 */
+            margin-top: -200px; /* 自定义上边距 */
         }
     </style>
 </head>
