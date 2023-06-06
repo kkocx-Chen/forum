@@ -28,12 +28,12 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo '<div class="container">';
-    echo '<div class="row">';
+    echo '<div class="row justify-content-center">'; // 使用 justify-content-center 將卡片容器置中
 
     // 迭代輸出每一筆資料
     while ($row = $result->fetch_assoc()) {
         echo '<div class="col-md-4">';
-        echo '<div class="card mb-3">';
+        echo '<div class="card mb-3 text-center">'; // 使用 text-center 將卡片內容置中
         echo '<div class="card-body">';
         echo '<h5 class="card-title">序號</h5>';
         echo '<p class="card-text">' . $row["serial_number"] . '</p>';
@@ -47,6 +47,7 @@ if ($result->num_rows > 0) {
 } else {
     echo '沒有資料';
 }
+
 
 
 
