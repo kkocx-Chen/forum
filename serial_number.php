@@ -75,6 +75,20 @@
 
                         echo "<h5 class='card-title'>資料庫中的記錄數量：</h5>";
                         echo "<p class='card-text'>$totalRecords 筆資料</p>";
+
+                        echo "<h5 class='card-title'>資料庫中的內容：</h5>";
+                        $sql = "SELECT * FROM Win11";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            echo "<ul class='list-group'>";
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<li class='list-group-item'>" . $row['serial_number'] . "</li>";
+                            }
+                            echo "</ul>";
+                        } else {
+                            echo "<p class='card-text'>目前沒有資料</p>";
+                        }
                     } else {
                         echo "<p class='card-text'>目前沒有資料</p>";
                     }
