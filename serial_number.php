@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("連線失敗：" . $conn->connect_error);
 }
 
-$serialNumber = "YYYY"; // 要插入的序號值
+$serialNumber = "12345678"; // 要插入的序號值
 
 // 構建 INSERT 語句並執行
 $sql = "INSERT INTO Win11 (serial_number) VALUES ('$serialNumber')";
