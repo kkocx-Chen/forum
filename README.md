@@ -1,2 +1,2 @@
 # 序號生產網
-網站：forum.kkocx.com
+[網站點擊](https://)
